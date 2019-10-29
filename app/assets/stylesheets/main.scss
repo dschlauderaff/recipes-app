@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+// bulma overrides
+$family-primary: 'Montserrat', sans-serif;
+$footer-padding: 3rem 1.5rem;
+// any overrides have to occur before importing bulma
+@import 'bulma/bulma';
+@import '_layout';
