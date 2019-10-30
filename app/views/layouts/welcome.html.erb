@@ -11,22 +11,25 @@
       crossorigin="anonymous"
     />
 
+    <style>
+      .hero {
+        background: url(<%= asset_path 'hero-1.jpg' %>) center / cover;
+      }
+
+      @media (max-width: 1024px) { background: url(<% asset_path 'hero-2.jpg') center /cover; }
+      @media (max-width: 768px) { background: url(<% asset_path 'hero-3.jpg') center /cover; }
+
+    </style>
+
     <%= stylesheet_link_tag 'application', media: 'all',
     'data-turbolinks-track': 'reload' %> <%= javascript_pack_tag 'application',
     'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= render '/layouts/nav' %>    
-    <section class="section">
-      <div class="container">
-        <%= yield %>
-      </div>
+    <section class="hero is-fullheight">
+
     </section>
-    <footer class="footer">
-      <div class="container">
-        Copyright © No Stories. All rights reserved.
-      </div>
-    </footer>
+   <%= yield %>
   </body>
 </html>

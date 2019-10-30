@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'pages#index'
+  root 'welcome#index'
 
   get 'home' => 'pages#home'
   get 'profile' => 'pages#profile'
