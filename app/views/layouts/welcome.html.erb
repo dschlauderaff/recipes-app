@@ -13,12 +13,19 @@
 
     <style>
       .hero {
-        background: url(<%= asset_path 'hero-1.jpg' %>) center / cover;
+        background: black url(<%=asset_path'hero-1.jpg'%>) center / cover;
       }
 
-      @media (max-width: 1024px) { background: url(<% asset_path 'hero-2.jpg') center /cover; }
-      @media (max-width: 768px) { background: url(<% asset_path 'hero-3.jpg') center /cover; }
-
+      @media (max-width: 1024px) {
+        .hero {
+          background: black url(<%=asset_path'hero-2.jpg'%>) center / cover;
+        }
+      }
+      @media (max-width: 768px) {
+        .hero {
+          background: black url(<%=asset_path'hero-3.jpg'%>) center / cover;
+        }
+      }
     </style>
 
     <%= stylesheet_link_tag 'application', media: 'all',
@@ -28,8 +35,40 @@
 
   <body>
     <section class="hero is-fullheight">
-
+      <nav class="hero-head">
+        <div
+          class="columns is-mobile is-marginless heading has-text-weight-bold has-text-white"
+        >
+          <div class="column left">
+            <figure class="navbar-item image">
+              <img src=<%= asset_path 'logo.png' %> alt="No Stories logo"
+              style="max-height: 5rem;">
+            </figure>
+          </div>
+          <div class="column right ">
+            <p class="navbar-item has-text-white desktop">Sign In</p>
+            <p class="navbar-item has-text-white desktop">Home</p>
+            <figure class="navbar-item has-text-white center">
+              <i class="fas fa-bars" style="font-size: 1rem;"></i>
+            </figure>
+          </div>
+        </div>
+      </nav>
+      <header class="hero-body">
+        <div
+          class="is-overlay has-text-centered single-spaced"
+          style="top: 150px;"
+        >
+          <h1
+            class="subtitle is-4 is-size-5-mobile is-uppercase has-text-weight-light"
+          >
+            Save the recipe
+          </h1>
+          <h2 class="title has-text-white is-uppercase is-1 is-size-4-mobile">
+            Not the life story
+          </h2>
+        </div>
+      </header>
     </section>
-   <%= yield %>
   </body>
 </html>

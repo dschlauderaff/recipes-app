@@ -3,6 +3,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  background-color: $background;
 }
 .header {
   background-color: $white-bis;
@@ -11,4 +12,8 @@ body {
 .section {
   display: flex;
   flex: 1 0 auto;
+}
+.button {
+  background-color: $primary;
+  color: $is-on-color;
 }

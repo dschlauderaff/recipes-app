@@ -3,6 +3,15 @@
 // bulma overrides
 $family-primary: 'Montserrat', sans-serif;
 $footer-padding: 3rem 1.5rem;
+$primary: #984b43;
+$primary-variant: #233237;
+$secondary: #eac67e;
+$text: #fff;
+$is-on-color: #000;
+$background: #121212;
+$error: #cf6679;
+
 // any overrides have to occur before importing bulma
 @import 'bulma/bulma';
 @import '_layout';
+@import '_welcome';
