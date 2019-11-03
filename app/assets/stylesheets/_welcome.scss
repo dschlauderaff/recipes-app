@@ -21,8 +21,21 @@
     line-height: 1;
 }
 
+.cta-button {
+	background-color: $primary-variant;
+	color: white;
+	margin-top: 15rem;	
+	&:hover {
+		color: white;
+	}
+}
+
 @media (max-width: 1024px) {
 	.desktop {
 		display: none;
+	}
+
+	.navbar-menu {
+		background-color: black;
 	}
 }

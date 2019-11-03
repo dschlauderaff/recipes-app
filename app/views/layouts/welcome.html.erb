@@ -35,25 +35,7 @@
 
   <body>
     <section class="hero is-fullheight">
-      <nav class="hero-head">
-        <div
-          class="columns is-mobile is-marginless heading has-text-weight-bold has-text-white"
-        >
-          <div class="column left">
-            <figure class="navbar-item image">
-              <img src=<%= asset_path 'logo.png' %> alt="No Stories logo"
-              style="max-height: 5rem;">
-            </figure>
-          </div>
-          <div class="column right ">
-            <p class="navbar-item has-text-white desktop">Sign In</p>
-            <p class="navbar-item has-text-white desktop">Home</p>
-            <figure class="navbar-item has-text-white center">
-              <i class="fas fa-bars" style="font-size: 1rem;"></i>
-            </figure>
-          </div>
-        </div>
-      </nav>
+      <%= render '/layouts/nav' %>
       <header class="hero-body">
         <div
           class="is-overlay has-text-centered single-spaced"
@@ -67,6 +49,7 @@
           <h2 class="title has-text-white is-uppercase is-1 is-size-4-mobile">
             Not the life story
           </h2>
+          <a class="button is-large is-rounded cta-button">Get Started</a>
         </div>
       </header>
     </section>

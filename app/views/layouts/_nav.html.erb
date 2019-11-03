@@ -1,25 +1,46 @@
-<header class="header">
-  <div class="container">
-    <nav class="level">
-      <div class="level-left">
-        <div class="level-item">
-          No Stories
-        </div>
-      </div>
-      <div class="level-right">
-        <p class="level-item">
-          <a class="button ">
-            <span class="icon">
-              <i class="fab fa-github"></i>
-            </span>
-            <span>GitHub</span>
-          </a>
-        </p>
-        <p class="level-item">
-          <%= link_to("Manage Users", users_path, :class => "button is-dark
-          is-outlined") %>
-        </p>
-      </div>
-    </nav>
+<nav
+  class="navbar is-transparent"
+  role="navigation"
+  aria-label="main navigation"
+>
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src=<%= asset_path 'logo.png' %> alt="No Stories logo"
+      style="max-height: 5rem;" />
+    </a>
+
+    <a
+      role="button"
+      class="navbar-burger burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarMenu"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
   </div>
-</header>
+
+  <div id="navbarMenu" class="navbar-menu has-text-right">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        Home
+      </a>
+
+      <a class="navbar-item">
+        Documentation
+      </a>
+    </div>
+
+    <div class="navbar-end">
+      <a class="navbar-item">
+        Log in
+      </a>
+
+      <a class="navbar-item">
+        <strong>Sign up</strong>
+      </a>
+    </div>
+  </div>
+</nav>
